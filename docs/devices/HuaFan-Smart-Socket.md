@@ -93,3 +93,8 @@ generic.menu.CrystalFreq.26=26 MHz`
 generic.menu.CrystalFreq.40=40 MHz`
 generic.menu.CrystalFreq.40.build.extra_flags=-DF_CRYSTAL=40000000
 ```
+
+When you compile by PlatformIO or Gitpod, you will need to rename **platformio_override_sample.ini** to **platformio_override.ini**
+
+modify line 48 (few lines below [common])
+**build_flags = ${core.build_flags}** >>>>> to >>>>> **build_flags = ${core.build_flags} -DF_CRYSTAL=40000000**
